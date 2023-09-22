@@ -1,0 +1,43 @@
+body {
+  background: #3e582b4f;
+}
+.form-to_do {
+  border: 1px solid;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  width: 300px;
+  height: auto;
+  margin: 95px auto;
+  padding: 40px;
+  background: #ebc1bfa6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: -2px -3px 20px 3px rgb(0 0 0 / 48%);
+}
+
+h2 {
+  text-align: center;
+
+  font-size: 1.7rem;
+  font-weight: 570;
+  text-shadow: 1px -4px 0px rgb(165 135 163 / 62%);
+}
+input {
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 60px;
+  border: 1px solid gray;
+  height: 30px;
+  outline: none;
+  font-size: 1.1rem;
+  background: #3e582b4f;
+  color: rgb(199, 197, 197);
+}
+li {
+  list-style: none;
+}
+li::before {
+  content: "*";
+  margin-right: 12px; /* pour ajouter un espace entre l'astérisque et le texte */
+}
