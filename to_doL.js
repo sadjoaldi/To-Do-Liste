@@ -39,7 +39,7 @@ const form = document.querySelector("form");
 function storageList() {
   window.localStorage.todolist = list.innerHTML;
 }
-//*function pour attribuer la valeur du local storage à ma liste
+//*function pour stocker la liste en local;
 function getTodos() {
   if (window.localStorage.todolist) {
     list.innerHTML = window.localStorage.todolist;
@@ -58,3 +58,11 @@ form.addEventListener("submit", (e) => {
 });
 
 //*Pour supprimer un element à ma liste
+list.addEventListener("click", (e) => {
+  if ((<e className="target classList contains"></e>)("checked")) {
+    e.target.remove();
+  } else {
+    e.target.classList.add("checked");
+  }
+  storageList();
+});
