@@ -39,8 +39,7 @@ const form = document.querySelector("form");
 function storageList() {
   window.localStorage.todolist = list.innerHTML;
 }
-//*function pour attribuer la valeur du local storage à ma list
-
+//*function pour attribuer la valeur du local storage à ma liste
 function getTodos() {
   if (window.localStorage.todolist) {
     list.innerHTML = window.localStorage.todolist;
@@ -48,3 +47,14 @@ function getTodos() {
     list.innerHTML = `<li>Cliquez sur un todo pour le supprimer</li>`;
   }
 }
+window.addEventListener("load", getTodos());
+
+//*ajouter les elements à ma liste
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); //permet de se premnunir contre son comportement par default(type rechager la page)
+  list.innerHTML += `<li>${item.value}</li>`;
+  item.value = "";
+  storageList();
+});
+
+//*Pour supprimer un element à ma liste
